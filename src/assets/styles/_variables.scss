@@ -1,0 +1,28 @@
+$body-font-family: 'Montserrat', sans-serif;
+$font-size-root: calc(100vw / 143);
+$main-font-color: #0b3709;
+$primary-light-color: #76bd73;
+$primary-color: #0b3709;
+$main-background-color: #fff;
+
+// breakpoints
+$breakpoint-sm: 599px;
+$breakpoint-md: 960px;
+$breakpoint-lg: 1440px;
+$breakpoint-xl: 1904px;
+
+// bootstrap breakpoints
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px
+) !default;
+
+// font colors
+$main-font-color: #424242;
+$grey-font-color: #8b8b8b;
+$green-font-color: #b4ce54;
+$darkgreen-font-color: #2e7a93;

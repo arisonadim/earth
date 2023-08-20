@@ -1,0 +1,72 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body,
+html {
+  height: 100%;
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+  outline: none;
+}
+
+html {
+  font-family: $body-font-family;
+  font-size: $font-size-root;
+  line-height: 1.5;
+  word-spacing: 1px;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+
+  @media screen and (max-width: $breakpoint-sm) {
+    font-size: calc(100vw / 65);
+  }
+  @media screen and (min-width: $breakpoint-lg) {
+    font-size: 10px;
+  }
+
+  color: $main-font-color;
+
+  img {
+    max-height: 100%;
+    width: auto;
+  }
+
+  a {
+    color: $main-font-color;
+  }
+
+  p {
+    font-size: 4rem;
+    font-family: $body-font-family;
+
+    @include sm() {
+      font-size: 2rem;
+    }
+  }
+
+  > * {
+    font-size: 1.8rem;
+  }
+
+  img,
+  svg {
+    vertical-align: middle;
+  }
+
+  body {
+    overflow-x: hidden;
+    background: $main-background-color;
+  }
+}
