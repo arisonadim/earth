@@ -18,7 +18,8 @@ async function getDateDetails(e: string): Promise<any> {
     console.log("🚀 ~ file: http.ts:18 ~ getDateDetails ~ data?.data.events[index]:", data?.data.events[index])
     const output = `In ${item.year}: ${item.text}`
     // TODO refactoring needed
-    // TODO split to simple functions
+    // TODO split into simple functions
+    // TODO keep fetched data in store. When pressed more — select random event from stored array
     return output
   } catch (e) {
     console.error(e)
