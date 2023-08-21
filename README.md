@@ -3,5 +3,5 @@ SPA My first day on the Earth - it's about your Birthday. Just type in/select yo
 
 This is just simple demo app.
 
-Production available at [arisonadim.github.com/earth](https://arisonadim.github.com/earth)
+Production available at [arisonadim.github.io/earth](https://arisonadim.github.io/earth)
 
