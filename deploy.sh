@@ -24,3 +24,5 @@ git commit -m '[add] static for gh-pages deploy'
 git push -f git@github.com:arisonadim/earth.git master:gh-pages
 
 cd -
+
+rm -rf dist
