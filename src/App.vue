@@ -5,6 +5,8 @@ import Input from 'Components/input.vue'
 import Earth from '@/assets/images/mfdonte.png'
 // import { useDateStore } from '@/stores/date'
 // TODO button component
+// TODO add button loading state
+// TODO add animated ui/ux data fetching
 
 const date = ref('')
 const dateInfo = ref('')
