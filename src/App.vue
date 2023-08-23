@@ -2,7 +2,7 @@
 import { ref } from 'vue'
 import { getDateDetails } from '@/helpers/http'
 import Input from 'Components/input.vue'
-import Earth from '@/assets/images/mfdonte.png'
+
 // import { useDateStore } from '@/stores/date'
 // TODO button component
 // TODO add button loading state
@@ -21,9 +21,10 @@ const getDetails = async (e: string): Promise<any> => {
     <div>
       <div class="planet__wrapper">
         <div class="moon__wrapper">
-          <img :src="Earth" alt="" class="moon__img" />
+          <div class="moon__sattelite"></div>
         </div>
-        <img :src="Earth" alt="Planet Earth" class="planet__img" />
+        <div class="planet__earth"> </div>
+        <div class="planet__text"></div>
       </div>
 
       <h1 v-if="dateInfo.length">{{ dateInfo }}</h1>
@@ -40,38 +41,54 @@ const getDetails = async (e: string): Promise<any> => {
 .planet {
   &__wrapper {
     margin: 5rem auto;
-    width: 30rem;
-    height: 30rem;
     position: relative;
   }
-  &__img {
-    height: 100%;
-    width: auto;
+  &__earth {
+    width: 30rem;
+    height: 30rem;
+    border-radius: 50%;
+    background-image: url('/src/assets/images/landscape.png');
+    box-shadow: inset -1.5rem -1.3rem 1rem rgba(0,0,0,0.2);
+    background-size: 45.4rem;
+    transform: rotateZ(-7deg);
+    background-repeat: repeat-x;
+    animation: rotate linear 32s infinite;
+  }
+
+  &__text {
+    position: absolute;
+    top: -1rem;
+    left: 0;
+    width: 90%;
+    height: 90%;
+    content: "";
+    background: url('/src/assets/images/text.png') center/contain no-repeat;
   }
 }
 
 .moon {
   &__wrapper {
     position: absolute;
-    width: 5rem;
-    height: 5rem;
     top: 50%;
     left: -20rem;
     transform: translateY(-50%);
     animation: 
-      x-axis ease-in-out 4s infinite, 
-      y-axis ease-in-out 4s infinite;
+      x-axis ease-in-out 10s infinite, 
+      y-axis ease-in-out 10s infinite;
   }
 
-  &__img {
-    height: 100%;
-    width: auto;
-    animation:  z-axis ease-in-out 4s infinite;
+  &__sattelite {
+    width: 5rem;
+    height: 5rem;
+    box-shadow: inset -1.5rem -0.3rem 0.5rem rgba(0,0,0,0.2);
+    border-radius: 50%;
+    background: url('/src/assets/images/moon.png') center center/cover no-repeat;
+    animation: z-axis ease-in-out 10s infinite;
   }
 }
 
 @keyframes x-axis {
-  49% {
+  30% {
     z-index: 1;
   }
 
@@ -110,6 +127,11 @@ const getDetails = async (e: string): Promise<any> => {
 
   100% {
     transform: translateY(+5rem);
+  }
+}
+@keyframes rotate {
+  to {
+    background-position: -45.4rem 0;
   }
 }
 </style>
