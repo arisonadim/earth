@@ -34,7 +34,7 @@ const getDetails = async (e: string): Promise<any> => {
     <div v-if="dateInfo.length">
       <h1>{{ dateInfo }}</h1>
     </div>
-    <div v-else>
+    <div v-else-if="!isLoading">
       <h1 class="title">Type in / select date</h1>
       <Input v-model="date" />
     </div>
