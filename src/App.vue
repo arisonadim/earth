@@ -26,9 +26,8 @@ const getDetails = async (e: string): Promise<any> => {
         <div class="planet__earth"> </div>
         <div class="planet__text"></div>
       </div>
-
-      <h1 v-if="dateInfo.length">{{ dateInfo }}</h1>
     </div>
+    <h1 v-if="dateInfo.length">{{ dateInfo }}</h1>
     <div v-if="!dateInfo.length">
       <h1 class="title">Type in / select date</h1>
       <Input v-model="date" />
