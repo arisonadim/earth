@@ -2,6 +2,7 @@
 import { ref } from 'vue'
 import { getDateDetails } from '@/helpers/http'
 import Input from 'Components/input.vue'
+import Button from 'Components/button.vue'
 
 // import { useDateStore } from '@/stores/date'
 // TODO button component
@@ -10,9 +11,12 @@ import Input from 'Components/input.vue'
 
 const date = ref('')
 const dateInfo = ref('')
+const isLoading = ref(false)
 
 const getDetails = async (e: string): Promise<any> => {
+  isLoading.value = true;
   dateInfo.value = await getDateDetails(e)
+  isLoading.value = false;
 }
 </script>
 
@@ -23,16 +27,18 @@ const getDetails = async (e: string): Promise<any> => {
         <div class="moon__wrapper">
           <div class="moon__sattelite"></div>
         </div>
-        <div class="planet__earth"> </div>
+        <div class="planet__earth"></div>
         <div class="planet__text"></div>
       </div>
     </div>
-    <h1 v-if="dateInfo.length">{{ dateInfo }}</h1>
-    <div v-if="!dateInfo.length">
+    <div v-if="dateInfo.length">
+      <h1>{{ dateInfo }}</h1>
+    </div>
+    <div v-else>
       <h1 class="title">Type in / select date</h1>
       <Input v-model="date" />
     </div>
-    <button class="btn" @click="getDetails(date)">{{ dateInfo.length ? 'More' : 'Go!' }}</button>
+    <Button @click="getDetails(date)" :loading="isLoading" :disabled="!date.length">{{ dateInfo.length ? 'More' : 'Go!' }}</Button>
   </div>
 </template>
 
@@ -47,7 +53,7 @@ const getDetails = async (e: string): Promise<any> => {
     height: 30rem;
     border-radius: 50%;
     background-image: url('/src/assets/images/landscape.png');
-    box-shadow: inset -1.5rem -1.3rem 1rem rgba(0,0,0,0.2);
+    box-shadow: inset -1.5rem -1.3rem 1rem rgba(0, 0, 0, 0.2);
     background-size: 45.4rem;
     transform: rotateZ(-7deg);
     background-repeat: repeat-x;
@@ -60,7 +66,7 @@ const getDetails = async (e: string): Promise<any> => {
     left: 0;
     width: 90%;
     height: 90%;
-    content: "";
+    content: '';
     background: url('/src/assets/images/text.png') center/contain no-repeat;
   }
 }
@@ -71,15 +77,13 @@ const getDetails = async (e: string): Promise<any> => {
     top: 50%;
     left: -20rem;
     transform: translateY(-50%);
-    animation: 
-      x-axis ease-in-out 10s infinite, 
-      y-axis ease-in-out 10s infinite;
+    animation: x-axis ease-in-out 10s infinite, y-axis ease-in-out 10s infinite;
   }
 
   &__sattelite {
     width: 5rem;
     height: 5rem;
-    box-shadow: inset -1.5rem -0.3rem 0.5rem rgba(0,0,0,0.2);
+    box-shadow: inset -1.5rem -0.3rem 0.5rem rgba(0, 0, 0, 0.2);
     border-radius: 50%;
     background: url('/src/assets/images/moon.png') center center/cover no-repeat;
     animation: z-axis ease-in-out 10s infinite;
