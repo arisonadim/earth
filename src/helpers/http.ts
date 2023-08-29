@@ -13,7 +13,7 @@ async function getDateDetails(e: string): Promise<any> {
     const data = await axios.get(`${apiUrl}${month}/${day}`)
     console.log('data', data?.data.events)
     const arrSize: number = data?.data.events.length
-    const index = Math.floor(Math.random() * arrSize)
+    const index: number = Math.floor(Math.random() * arrSize)
     const item = data?.data.events[index]
     console.log("🚀 ~ file: http.ts:18 ~ getDateDetails ~ data?.data.events[index]:", data?.data.events[index])
     const output = `In ${item.year}: ${item.text}`

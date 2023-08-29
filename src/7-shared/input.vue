@@ -9,7 +9,9 @@ const value = computed({
     return props.modelValue
   },
   set(value) {
-    emit('update:modelValue', value)
+    const filteredValue = value
+      .replace(/^0+(?=\d)/, '')
+    emit('update:modelValue', filteredValue)
   }
 })
 // TODO validate

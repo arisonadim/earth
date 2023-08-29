@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import { getDateDetails } from '@/helpers/http'
-import Input from 'Components/input.vue'
-import Button from 'Components/button.vue'
+import Input from 'UI/input.vue'
+import Button from 'UI/button.vue'
 
 // import { useDateStore } from '@/stores/date'
 // TODO button component

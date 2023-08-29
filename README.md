@@ -6,7 +6,7 @@ This is just simple demo app.
 | :exclamation:  Work is in progress!     |
 |-----------------------------------------|
 
-This implements Feature Sliced Design — front end architecture approach. It is for quite big project, but here is just to try.
+This implements [Feature Sliced Design](https://feature-sliced.design/) — front end architecture approach. It is for quite big projects, and here this is just to try.
 
 ![FCD scheme](https://github.com/arisonadim/earth/blob/master/.github/assets/scheme.png?raw=true)
 

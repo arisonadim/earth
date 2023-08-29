@@ -25,7 +25,13 @@
       "Styles/*": ["src/assets/styles/*"],
       "Images/*": ["src/assets/images/*"],
       "Fonts/*": ["src/assets/fonts/*"],
-      "Components/*": ["src/components/*"]
+      "Components/*": ["src/components/*"],
+      "UI/*": ["src/7-shared/*"],
+      "Entities/*": ["src/6-entities/*"],
+      "Features/*": ["src/5-features/*"],
+      "Widgets/*": ["src/4-widgets/*"],
+      "Pages/*": ["src/3-pages/*"],
+      "App/*": ["src/1-app/*"]
     }
   },
   "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"],
