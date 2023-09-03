@@ -1,0 +1,37 @@
+{
+	"folders": [		{
+			"name": "app",
+			"path": "../src/app"
+		},
+		{
+			"name": "processed",
+			"path": "../src/processed"
+		},
+		{
+			"name": "pages",
+			"path": "../src/pages"
+		},
+		{
+			"name": "widgets",
+			"path": "../src/widgets"
+		},
+		{
+			"name": "features",
+			"path": "../src/features"
+		},
+		{
+			"name": "entities",
+			"path": "../src/entities"
+		},
+		{
+			"name": "shared",
+			"path": "../src/shared"
+		},
+
+		{
+			"name": "...rest",
+			"path": ".."
+		}
+	],
+	"settings": {}
+}
