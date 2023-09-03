@@ -60,6 +60,7 @@ dist-ssr
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
+!.vscode/earth.code-workspace
 .idea
 .DS_Store
 *.suo
