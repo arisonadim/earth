@@ -4,8 +4,8 @@
 			"path": "../src/app"
 		},
 		{
-			"name": "processed",
-			"path": "../src/processed"
+			"name": "processes",
+			"path": "../src/processes"
 		},
 		{
 			"name": "pages",
