@@ -1,14 +1,21 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 
-const props = defineProps(['modelValue'])
-const emit = defineEmits(['update:modelValue'])
+interface Props {
+  modelValue: string
+}
+interface Emits {
+  (event: 'update:modelValue', payload: string ): void
+}
+
+const props = withDefaults(defineProps<Props>(), { modelValue: ''})
+const emit = defineEmits<Emits>()
 
 const value = computed({
-  get() {
+  get(): string {
     return props.modelValue
   },
-  set(value) {
+  set(value: string):void {
     const filteredValue = value
       .replace(/^0+(?=\d)/, '')
     emit('update:modelValue', filteredValue)
