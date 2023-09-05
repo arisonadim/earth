@@ -13,6 +13,7 @@
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "preserve",
+    "allowJs": true,
 
     /* Linting */
     "strict": true,
@@ -26,14 +27,14 @@
       "Images/*": ["src/assets/images/*"],
       "Fonts/*": ["src/assets/fonts/*"],
       "Components/*": ["src/components/*"],
-      "UI/*": ["src/7-shared/*"],
-      "Entities/*": ["src/6-entities/*"],
-      "Features/*": ["src/5-features/*"],
-      "Widgets/*": ["src/4-widgets/*"],
-      "Pages/*": ["src/3-pages/*"],
-      "App/*": ["src/1-app/*"]
+      "UI/*": ["src/shared/*"],
+      "Entities/*": ["src/entities/*"],
+      "Features/*": ["src/features/*"],
+      "Widgets/*": ["src/widgets/*"],
+      "Pages/*": ["src/pages/*"],
+      "App/*": ["src/app/*"]
     }
   },
-  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"],
+  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue", "src/shared/ui/Input/index.ts"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
