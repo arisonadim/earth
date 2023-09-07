@@ -17,7 +17,7 @@ defineEmits(['click'])
 
 <style lang="scss" scoped>
 .btn {
-  width: min(20rem, 100%);
+  min-width: 30rem;
   padding: 1.2rem 3rem;
   border: none;
   border-radius: 5rem;
