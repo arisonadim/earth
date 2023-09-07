@@ -1,8 +1,6 @@
 <template>
-  <div>
-    <Planet />
-    <DateInfo />
-  </div>
+  <Planet />
+  <DateInfo />
 </template>
 
 <script setup lang="ts">

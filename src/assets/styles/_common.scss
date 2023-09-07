@@ -6,8 +6,10 @@
   margin: 0;
 }
 
-body,
-html {
+html,
+body {
+  // min-height: 100%;
+  // height: fit-content;
   height: 100%;
 }
 
@@ -67,6 +69,6 @@ html {
 
   body {
     overflow-x: hidden;
-    background: $main-background-color;
+    background: $main-background-gradient;
   }
 }

@@ -15,7 +15,7 @@ defineEmits(['click'])
   </button>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .btn {
   width: min(20rem, 100%);
   padding: 1.2rem 3rem;
@@ -23,6 +23,7 @@ defineEmits(['click'])
   border-radius: 5rem;
   font-family: 'Gochi Hand', cursive;
   font-size: 4rem;
+  cursor: pointer;
 
   &:disabled {
     cursor: not-allowed;
